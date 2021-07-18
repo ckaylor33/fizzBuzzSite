@@ -1,20 +1,24 @@
 :root {
-  --primary-color: #1d5888;
-  --secondary-color: #ff993b;
+  --primary-color: #142c4c;
+  --secondary-color: #e05a98;
   --dark-color: #292929;
   --white-color: #dff3e4;
 }
 
 body {
   color: var(--dark-color);
+  font-family: 'Open Sans', sans-serif;
 }
 
 nav {
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
+  font-family: 'Open Sans', sans-serif;
 }
 
 footer {
-  background-color: var(--dark-color);
+  background-color: var(--primary-color);
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 1rem;
 }
 
 h1,
@@ -24,10 +28,8 @@ h4,
 h5,
 h6 {
   color: var(--primary-color);
-}
-
-footer {
-  padding-right: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
 }
 
 footer .social > a {
@@ -38,6 +40,41 @@ footer .social > a {
 footer .social > a:hover {
   opacity: 0.9;
   color: var(--secondary-color);
+}
+
+.tryButton {
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.tryButton:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--primary-color);
+}
+
+.buzzItBtn {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+.buzzItBtn:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.logoFont {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.customBorderBottom {
+  border-bottom: 1px solid var(--secondary-color) !important;
+}
+
+.border-end {
+  border-right: 1px solid var(--secondary-color) !important;
 }
 
 .bsicon {
@@ -58,6 +95,19 @@ footer .social > a:hover {
 
 .checklist > li i {
   color: var(--secondary-color);
+}
+
+.Fizz {
+  color: rgb(230, 151, 32);
+}
+
+.Buzz {
+  color: var(--secondary-color);
+}
+
+.FizzBuzz {
+  color: red;
+  font-weight: bold;
 }
 
 code[class*='language-'],

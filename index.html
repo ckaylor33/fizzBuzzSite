@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>App Name: A Coding Project By Charlie Kaylor</title>
+    <title>FIZZ BUZZ: A Coding Project By Charlie Kaylor</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -22,6 +22,13 @@
       crossorigin="anonymous"
     ></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/css/site.css" />
 
     <link rel="icon" href="img/favicon (1).ico" />
@@ -31,9 +38,9 @@
     <!-- Nav Section -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><i class="fas fa-code d-inline-block align-text-center"></i> APP
-          NAME</a
+        <a class="navbar-brand logoFont" href="#"
+          ><i class="fas fa-code d-inline-block align-text-center"></i> FIZZ
+          BUZZ</a
         >
         <button
           class="navbar-toggler"
@@ -60,7 +67,12 @@
               <a class="nav-link" href="code.html">The Code</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">Git Repo</a>
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://github.com/ckaylor33/fizzBuzzSite"
+                >Git Repo</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="#">About</a>
@@ -76,12 +88,13 @@
         <div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
           <div class="col order-last order-lg-first">
             <h1 class="display-5 fw-bold lh-1 mb-3">
-              APP NAME: A Coding Project
+              FIZZ BUZZ: A Coding Project
             </h1>
             <h4 class="lead">
-              Live life one loop at a time. A javascript coding excercise using
-              loops. Write a program that displays the numbers from 0 to 100.
-              Display the even numbers in <strong>BOLD.</strong>
+              Write a
+              program that prints the numbers from 1 to 100 and for multiples of
+              '3' display <strong>"Fizz"</strong> instead of the number and for the multiples of
+              '5' display <strong>"Buzz"</strong>. If a multiple of both display <strong>FizzBuzz</strong>.</h4>
             </h4>
             <ul class="fa-ul pt-2 checklist">
               <li>
@@ -117,7 +130,7 @@
               <a
                 href="app.html"
                 type="button"
-                class="btn btn-outline-dark btn-lg px-4 me-md-2"
+                class="btn btn-outline-dark btn-lg px-4 me-md-2 tryButton"
                 >Try It Out</a
               >
             </div>
@@ -142,7 +155,7 @@
           </div>
           <div class="col">
             <img
-              src="/img/Color logo - no background.svg"
+              src="/img/Color logo with background.svg"
               alt="App Logo"
               class="img-fluid center-block d-block mx-auto"
               width="700"
