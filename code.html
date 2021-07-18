@@ -85,18 +85,116 @@
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers"><code class="language-javascript">
-              //Call Hello World
-              function HelloWorld() {
-                alert('Hello World!')
-              }
+              //Get The Values From The Page
+//Starting/Controller function
+function getValues() {
+  //get the user values from the page
+  let fizzValue = document.getElementById('fizzValue').value
+  let buzzValue = document.getElementById('buzzValue').value
+
+  //check for numbers
+  fizzValue = parseInt(fizzValue)
+  buzzValue = parseInt(buzzValue)
+
+  //check that the numbers are integers
+  if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+    //call fizzBuzz
+    let fbArray = fizzBuzz(fizzValue, buzzValue)
+    //call displayData and write values to the screen
+    displayData(fbArray)
+  } else {
+    alert('You must enter integers')
+  }
+}
+
+//Generate FizzBuzz Numbers From Start To End
+//Logic function
+function fizzBuzz(fizzValue, buzzValue) {
+  //init the returnArray
+  let returnArray = []
+
+  //loop from 1 to 100
+  for (let i = 1; i <= 100; i++) {
+    //check current value in three steps
+    //push to the array correct value
+    if (i % fizzValue === 0 && i % buzzValue === 0) {
+      returnArray.push('FizzBuzz')
+    } else if (i % fizzValue === 0) {
+      returnArray.push('Fizz')
+    } else if (i % buzzValue === 0) {
+      returnArray.push('Buzz')
+    } else {
+      returnArray.push(i)
+    }
+  }
+
+  return returnArray
+}
+
+//Display FizzBuzz Values
+//Display/View function
+function displayData(fbArray) {
+  //get the table body element from the page
+  let tableBody = document.getElementById('results')
+
+  //get the template row
+  let templateRow = document.getElementById('fbTemplate')
+
+  //clear the table first
+  tableBody.innerHTML = ''
+
+  for (let index = 0; index < fbArray.length; index += 5) {
+    let tableRow = document.importNode(templateRow.content, true)
+
+    //grab the td's and put into an array
+    let rowCols = tableRow.querySelectorAll('td')
+    rowCols[0].classList.add(fbArray[index])
+    rowCols[0].textContent = fbArray[index]
+    rowCols[1].classList.add(fbArray[index + 1])
+    rowCols[1].textContent = fbArray[index + 1]
+    rowCols[2].classList.add(fbArray[index + 2])
+    rowCols[2].textContent = fbArray[index + 2]
+    rowCols[3].classList.add(fbArray[index + 3])
+    rowCols[3].textContent = fbArray[index + 3]
+    rowCols[4].classList.add(fbArray[index + 4])
+    rowCols[4].textContent = fbArray[index + 4]
+
+    tableBody.appendChild(tableRow)
+  }
+
+  //add all the rows to the table
+}
+
             </code></pre>
           </div>
           <div class="col-lg-4">
-            <p>The code is structured in one function.</p>
-            <h5>Hello World</h5>
+            <p>The code is structured in three functions.</p>
+            <h5>Get Values</h5>
             <p>
-              Hello world is a function that displays an alert with a message of
-              "Hello World"
+              My first function is used to initially get the users values/inputs
+              from the page (event listener in the document/HTML), parsing any
+              strings and checking that we have integers. If these checks
+              succeed the fizzBuzz function is called, passing in those values
+              as parameters. When fizzBuzz is returned, the array I get back is
+              placed as a parameter into the displayData function. If not
+              successful the user gets an alert to enter integers.
+            </p>
+            <h5>Fizz Buzz</h5>
+            <p>
+              I first have to initiate an empty to array, ready to be used
+              below. A for loop is created that goes from 1 to 100, checking
+              against the values given by the user using if/else statements. I
+              first check for a value that would match the FizzBuzz condition,
+              divisible by both the fizzValue and buzzValue, if this condition
+              is met then I want to push that to the returnArray and re-iterate
+              - no other check is made. If the condition is not met then I move
+              onto checking if the fizzValue is met (divisible by fizzValue), if
+              yes then push and re-iterate, if no then move onto the next else
+              if. I do the same thing for the buzzValue and if nothing, I just
+              push a number to the returnArray. That returnArray is then
+              returned to getValues and ready to be passed onto displayData.
+              <h5>Display Data</h5>
+              <p>The array containing the finished FizzBuzz data is passed into this function ready to used. First I make sure that data can be properly inserted into the HTML. I use a template in the HTML to more easily insert this data, clearing any old information first by using innerHTML and then moving straight into a for loop. Inside the for loop I first have to make a copy of the HTML inside the template so I can insert data where I want in this structure, using importNode and getting the entire nested HTML inside of templateRow. Upon each iteration of the for loop I insert either 'Fizz', 'Buzz', 'FizzBuzz' or a number into the table data(td) inside of the table row(tr). As my table row contains five table data slots, my for loop needs to iterate in increments of five; otherwise I would get repeat information displayed to the user. I also add the index as a class to each table data to get styling for my FizzBuzz, Fizz and Buzz. All of this is then added to the table and displayed to the user by using appendChild. Giving a nice little twist to a traditional coding interview question!</p>
             </p>
           </div>
         </div>
