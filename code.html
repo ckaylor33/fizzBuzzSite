@@ -1,90 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
-  <head>
-    <title>FIZZ BUZZ: A Coding Project By Charlie Kaylor</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+<head>
+  <title>FIZZ BUZZ: A Coding Project By Charlie Kaylor</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <script
-      src="https://kit.fontawesome.com/5db21ba9c6.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/css/site.css" />
+  <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="/css/site.css" />
 
-    <link rel="icon" href="img/favicon (1).ico" />
-  </head>
+  <link rel="stylesheet" href="css/prism.css" />
 
-  <body class="d-flex flex-column h-100">
-    <!-- Nav Section -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand logoFont" href="index.html"
-          ><i class="fas fa-code d-inline-block align-text-center"></i> FIZZ
-          BUZZ</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="app.html">The App</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="code.html"
-                >The Code</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://github.com/ckaylor33/fizzBuzzSite"
-                >Git Repo</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">About</a>
-            </li>
-          </ul>
-        </div>
+  <link rel="icon" href="img/favicon (1).ico" />
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Nav Section -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand logoFont" href="index.html"><i class="fas fa-code d-inline-block align-text-center"></i>
+        FIZZ
+        BUZZ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="app.html">The App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/ckaylor33/fizzBuzzSite">Git Repo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="#">About</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <!-- Main Section -->
-    <main class="flex-shrink-0">
-      <div class="container py-5 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">
-          The Code for FIZZ BUZZ.
-        </h2>
-        <div class="row row-cols-1 row-cols-lg-2">
-          <div class="col-lg-8">
-            <pre class="line-numbers"><code class="language-javascript">
+    </div>
+  </nav>
+  <!-- Main Section -->
+  <main class="flex-shrink-0">
+    <div class="container py-5 px-5 mt-5">
+      <h2 class="border-1 border-bottom border-dark">
+        The Code for FIZZ BUZZ.
+      </h2>
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col-lg-8">
+          <pre class="line-numbers"><code class="language-javascript">
               //Get The Values From The Page
 //Starting/Controller function
 function getValues() {
@@ -166,124 +142,116 @@ function displayData(fbArray) {
 }
 
             </code></pre>
-          </div>
-          <div class="col-lg-4">
-            <p>The code is structured in three functions.</p>
-            <h5>Get Values</h5>
-            <p>
-              My first function is used to initially get the users values/inputs
-              from the page (event listener in the document/HTML), parsing any
-              strings and checking that we have integers. If these checks
-              succeed the fizzBuzz function is called, passing in those values
-              as parameters. When fizzBuzz is returned, the array I get back is
-              placed as a parameter into the displayData function. If not
-              successful the user gets an alert to enter integers.
-            </p>
-            <h5>Fizz Buzz</h5>
-            <p>
-              I first have to initiate an empty to array, ready to be used
-              below. A for loop is created that goes from 1 to 100, checking
-              against the values given by the user using if/else statements. I
-              first check for a value that would match the FizzBuzz condition,
-              divisible by both the fizzValue and buzzValue, if this condition
-              is met then I want to push that to the returnArray and re-iterate
-              - no other check is made. If the condition is not met then I move
-              onto checking if the fizzValue is met (divisible by fizzValue), if
-              yes then push and re-iterate, if no then move onto the next else
-              if. I do the same thing for the buzzValue and if nothing, I just
-              push a number to the returnArray. That returnArray is then
-              returned to getValues and ready to be passed onto displayData.
-              <h5>Display Data</h5>
-              <p>The array containing the finished FizzBuzz data is passed into this function ready to used. First I make sure that data can be properly inserted into the HTML. I use a template in the HTML to more easily insert this data, clearing any old information first by using innerHTML and then moving straight into a for loop. Inside the for loop I first have to make a copy of the HTML inside the template so I can insert data where I want in this structure, using importNode and getting the entire nested HTML inside of templateRow. Upon each iteration of the for loop I insert either 'Fizz', 'Buzz', 'FizzBuzz' or a number into the table data(td) inside of the table row(tr). As my table row contains five table data slots, my for loop needs to iterate in increments of five; otherwise I would get repeat information displayed to the user. I also add the index as a class to each table data to get styling for my FizzBuzz, Fizz and Buzz. All of this is then added to the table and displayed to the user by using appendChild. Giving a nice little twist to a traditional coding interview question!</p>
-            </p>
-          </div>
+        </div>
+        <div class="col-lg-4">
+          <p>The code is structured in three functions.</p>
+          <h5>Get Values</h5>
+          <p>
+            My first function is used to initially get the users values/inputs
+            from the page (event listener in the document/HTML), parsing any
+            strings and checking that we have integers. If these checks
+            succeed the fizzBuzz function is called, passing in those values
+            as parameters. When fizzBuzz is returned, the array I get back is
+            placed as a parameter into the displayData function. If not
+            successful the user gets an alert to enter integers.
+          </p>
+          <h5>Fizz Buzz</h5>
+          <p>
+            I first have to initiate an empty to array, ready to be used
+            below. A for loop is created that goes from 1 to 100, checking
+            against the values given by the user using if/else statements. I
+            first check for a value that would match the FizzBuzz condition,
+            divisible by both the fizzValue and buzzValue, if this condition
+            is met then I want to push that to the returnArray and re-iterate
+            - no other check is made. If the condition is not met then I move
+            onto checking if the fizzValue is met (divisible by fizzValue), if
+            yes then push and re-iterate, if no then move onto the next else
+            if. I do the same thing for the buzzValue and if nothing, I just
+            push a number to the returnArray. That returnArray is then
+            returned to getValues and ready to be passed onto displayData.
+            <h5>Display Data</h5>
+            <p>The array containing the finished FizzBuzz data is passed into this function ready to used. First I make
+              sure that data can be properly inserted into the HTML. I use a template in the HTML to more easily insert
+              this data, clearing any old information first by using innerHTML and then moving straight into a for loop.
+              Inside the for loop I first have to make a copy of the HTML inside the template so I can insert data where
+              I want in this structure, using importNode and getting the entire nested HTML inside of templateRow. Upon
+              each iteration of the for loop I insert either 'Fizz', 'Buzz', 'FizzBuzz' or a number into the table
+              data(td) inside of the table row(tr). As my table row contains five table data slots, my for loop needs to
+              iterate in increments of five; otherwise I would get repeat information displayed to the user. I also add
+              the index as a class to each table data to get styling for my FizzBuzz, Fizz and Buzz. All of this is then
+              added to the table and displayed to the user by using appendChild. Giving a nice little twist to a
+              traditional coding interview question!</p>
+          </p>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- Footer Section -->
-    <footer class="footer mt-auto py-1">
-      <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-lg-3 gy-2">
-          <div
-            class="
+  <!-- Footer Section -->
+  <footer class="footer mt-auto py-1">
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-lg-3 gy-2">
+        <div class="
               col
               order-last order-lg-first
               text-light
               d-flex
               align-items-center
-            "
-          >
-            <div>
-              <span class="text-muted">&copy;2021</span> Charlie Kaylor |
-              charliekaylor@hotmail.com
-            </div>
+            ">
+          <div>
+            <span class="text-muted">&copy;2022</span> Charlie Kaylor |
+            charliekaylor@hotmail.com
           </div>
-          <div
-            class="
+        </div>
+        <div class="
               col
               d-flex
               align-items-center
               justify-content-start justify-content-lg-center
-            "
-          >
-            <img
-              src="img/White logo - no background.svg"
-              alt="Charlie Kaylor Logo"
-              height="59"
-            />
-          </div>
-          <div
-            class="
+            ">
+          <img src="img/White logo - no background.svg" alt="Charlie Kaylor Logo" height="59" />
+        </div>
+        <div class="
               col
               d-flex
               align-items-center
               justify-content-start justify-content-lg-end
-            "
-          >
-            <div class="row">
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-linkedin fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-github fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i
-                ></a>
-              </div>
+            ">
+          <div class="row">
+            <div class="col social">
+              <a href="https://www.linkedin.com/in/charlie-kaylor-2223951b3/" target="_blank"><i
+                  class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <div class="col social">
+              <a href="https://github.com/ckaylor33" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <div class="col social">
+              <a href="https://twitter.com/charlie_kaylor" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+  </script>
 
-    <script src="js/prism.js"></script>
+  <script src="js/prism.js"></script>
 
-    <script>
-      Prism.plugins.NormalizeWhitespace.setDefaults({
-        'remove-trailing': true,
-        'remove-indent': true,
-        'left-trim': true,
-        'right-trim': true,
-      })
-    </script>
-  </body>
+  <script>
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      'remove-trailing': true,
+      'remove-indent': true,
+      'left-trim': true,
+      'right-trim': true,
+    })
+  </script>
+</body>
+
 </html>
